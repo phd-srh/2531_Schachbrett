@@ -8,6 +8,14 @@ public class Schachbrett {
         System.out.print("Anzahl Zeilen: ");
         int anzahlDerZeilen = eingabe.nextInt();
 
-        // TODO
+        for (int zeile = startwert; zeile < startwert + anzahlDerZeilen; zeile++) {
+            for (int spalte = zeile; spalte < zeile + anzahlDerZeilen; spalte++) {
+                if (spalte < 10) {
+                    System.out.print(" ");
+                }
+                System.out.print(spalte + " ");
+            }
+            System.out.println();
+        }
     }
 }
