@@ -17,15 +17,15 @@ public class Schachbrett {
 
         for (int zeile = startwert; zeile < startwert + anzahlDerZeilen; zeile++) {
             for (int spalte = zeile; spalte < zeile + anzahlDerZeilen; spalte++) {
-                if (spalte < 10 && maximalerAusgabeWert >= 10) {
-                    System.out.print(" ");
+
+                int zehnerwert = 10;
+                while (maximalerAusgabeWert >= zehnerwert) {
+                    if (spalte < zehnerwert) {
+                        System.out.print(" ");
+                    }
+                    zehnerwert = zehnerwert * 10;
                 }
-                if (spalte < 100 && maximalerAusgabeWert >= 100) {
-                    System.out.print(" ");
-                }
-                if (spalte < 1000 && maximalerAusgabeWert >= 1000) {
-                    System.out.print(" ");
-                }
+
                 System.out.print(spalte + " ");
             }
             System.out.println();
